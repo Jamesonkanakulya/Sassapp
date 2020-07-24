@@ -1,0 +1,51 @@
+.featuredItems{
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem auto;
+
+    h2{
+        position: absolute;
+        margin-top: -6rem;
+        font-family: 'Noto Serif', serif;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        
+      
+    }
+
+    section{
+        width: 30%;
+
+
+        img{
+            width: 100%;
+            height: 60vh;
+
+            &:hover{
+                transform: scale(1.03);
+                transition: all 1s ease-out ;
+            }
+        }
+        h3{
+            font-family: 'Nunito', sans-serif;
+            text-transform: capitalize;
+            font-style: italic;
+            font-weight: 700;
+        }
+        p{
+            font-family: 'Nunito', sans-serif;
+            font-style: italic;
+            color: rgb(250, 27, 27);
+        
+        }
+
+
+    }
+
+
+
+
+
+}

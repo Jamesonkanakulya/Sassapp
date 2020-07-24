@@ -1,0 +1,212 @@
+@import "./variables";
+
+// @mixin mobile {
+//     @media screen and (max-width:$max_width){
+//         @content
+        
+//     }
+    
+// }
+
+@mixin myNavBar {
+   
+    width:100vw ;
+    top: 0;
+    left: 0;
+    
+    a{
+        color: rgb(37, 33, 33);
+    }
+            
+    .nav-items{
+        // background: $backgroundColor;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+   
+        
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    h2{
+        text-transform: capitalize;
+       
+      
+      
+    }
+
+    ul{ display: flex;
+        padding: 2rem 1rem;
+        list-style: none;
+
+        #closeIcon{
+            display: none;
+        }
+
+
+        li{
+            margin:1rem auto auto 2rem;
+            
+
+
+            a{
+                text-decoration: none;
+                font-size: 1.1rem;
+                
+                &:hover{
+                    color: red;
+                }
+
+            }
+        }
+     
+        
+
+    }
+    .search-container {
+        form {
+            span{
+                font-size: 1.3rem;
+                margin: 0 1rem;
+            }
+    }
+    }
+
+    
+}
+
+
+.nav-bar{
+   position: relative;
+   @include myNavBar()
+
+}
+.navBar{
+   position: fixed;
+   z-index: 1;
+   background: white;
+   border: none;
+   box-shadow: 0rem 0.2rem 5px rgb(161, 159, 159);
+
+   &:focus{
+       outline: none;
+   } ;
+   @include myNavBar()
+
+}
+@media screen and (max-width:$max_width){
+
+    @mixin SmallNAv {
+        .nav-items{
+   
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            width: 100%;
+            height: 23vh;
+
+            h2{
+                position: relative;
+                left: -10%;
+                top: -25%;
+            }
+
+            
+            
+    
+            ul{
+                
+                position: absolute;
+                flex-direction: column;
+                width: 150vw;
+                height: 120vh;
+                background: yellow;
+                top: -1rem;
+                left: -10rem;
+                justify-content: center;
+                z-index: 5;
+                padding-top: 12rem;
+    
+                li{
+                    text-align: center;
+                    margin:1rem auto auto .5rem;
+    
+                }
+
+                #closeIcon{
+                    position: absolute;
+                    display: block;
+                    left: 76%;
+                    top: 5%;
+                    font-size: 2.3rem;
+                   
+                }
+
+              
+            }
+
+            #search{
+                position: relative;
+                width: 20rem;
+                display: flex;
+                top: 2rem;
+                left: -107%;
+
+            }
+
+            .search-container{
+                position: absolute;
+                left: 70%;
+
+
+
+                .menu-icon{
+                    position: absolute;
+                    display: block;
+                    left: 20%;
+                   
+                  
+                    span{
+                        font-size: 2.3rem;
+                    
+                    }
+
+                   
+                    
+                }
+            }
+
+
+          
+            
+        }
+
+        .show-icon{
+            display: block;
+        }
+        .hide-icon{
+            display: none;
+        }
+
+        
+    }
+   
+    .nav-bar{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+        @include SmallNAv()
+       }
+    .navBar{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        width: 100%;
+        @include SmallNAv()
+       }
+    
+}
