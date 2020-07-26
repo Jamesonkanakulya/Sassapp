@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {FaAlignLeft, FaSearch, FaShoppingCart } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import { BsPersonFill } from "react-icons/bs";
+import Title from './Title';
 
 export class Navbar extends Component {
 
@@ -67,7 +68,7 @@ export class Navbar extends Component {
         return (
             <div className={scroll?"navBar":"nav-bar"}>
                 <div className="nav-items">
-                    <h2> <Link to="/">jameson kanakulya</Link></h2>
+                    <Link to="/"><Title/> </Link>
                     <div >
                         <ul  className={showMenu? "show-icon": "hide-icon"} >
                         <span  onClick={this.handleNav} id= "closeIcon"className={!showMenu ? "hide-icon" : "close-icon"} ><IoMdClose /></span>

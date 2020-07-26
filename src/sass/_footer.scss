@@ -1,0 +1,71 @@
+.container{
+    background: #f8f9fa;
+}
+
+@mixin para {
+    margin-top: 2rem;
+    color: rgb(126, 120, 120);
+    text-align: left;
+}
+
+.footerContainer {
+    background: #f8f9fa;
+    padding: 1rem;
+
+    margin-top: 4rem;
+
+    p {
+        @include para;
+    }
+
+    h4 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    ul {
+        list-style: none;
+        position: relative;
+
+        li {
+            a {
+                color: rgb(126, 120, 120);
+           
+                text-decoration: none;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.secondList {
+    padding: 1rem;
+
+    p {
+        @include para;
+    }
+
+    ul {
+        display: flex;
+
+        position: relative;
+        left: 90%;
+        top: -2.4rem;
+        li {
+            list-style: none;
+            padding-left: 1rem;
+
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: black;
+                    transform: scale(1.5);
+                    transition: all 0.5s linear;
+                }
+            }
+        }
+    }
+}

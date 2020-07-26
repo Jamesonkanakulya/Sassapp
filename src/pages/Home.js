@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Animate from 'animate.css-react'
 import gld from '../images/gld.png'
 import FeaturedItems from '../components/FeaturedItems'
+import Services from '../components/Services'
 
 export class Home extends Component {
     constructor(props) {
@@ -65,6 +66,7 @@ export class Home extends Component {
 
                 </div>
                 <FeaturedItems />
+                <Services/>
 
             </>
         )

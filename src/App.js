@@ -4,6 +4,7 @@ import './App.scss';
 import Home from './pages/Home';
 import About from './pages/About';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import {Switch,Route} from 'react-router-dom'
 import Blog from './pages/Blog';
 import Shop from './pages/Shop';
@@ -28,7 +29,7 @@ function App() {
         <Route component={Errorpage}/>
         
       </Switch>
-     
+     <Footer/>
       
     </div>
   );

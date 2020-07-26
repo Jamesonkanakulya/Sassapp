@@ -49,3 +49,18 @@
 
 
 }
+
+.featuredImages{
+    margin-top: 6rem;
+ 
+
+
+    img{
+        width: 100%;
+        
+        &:hover{
+            transform: scale(1.03);
+            transition: all 1s ease-out ;
+        }
+    }
+}
