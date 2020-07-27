@@ -1,8 +1,17 @@
 .videoPlayer{
   
-    width:100%;
+  
     justify-content: center;
     justify-items: center;
-    margin: 8rem auto 2rem  0%;
+    height: 820px;
+    margin: 8rem auto 2rem  1%;
+
+    @media screen and (max-width:800px){
+        display: none;
+    
+       
+    
+    
+    }
   
 }

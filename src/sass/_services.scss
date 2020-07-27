@@ -4,9 +4,19 @@
     background: red;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding: 1rem;
     margin-left: -1rem;
+
+    @media screen and (max-width:800px){
+        margin-top: 5rem;
+    
+       
+    
+    
+    }
+  
 
 
     span{

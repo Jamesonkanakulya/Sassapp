@@ -4,6 +4,8 @@ import { LabettieContext } from '../components/Context';
 import { PAgenation } from '../components/PAgenation';
 import PopularItems from '../components/PopularItems';
 import Services from '../components/Services';
+import {Background} from '../components/StyledComponent';
+import TitleTwo from '../components/TitleTwo';
 
 
 const getUnique = (items, value) => {
@@ -66,7 +68,11 @@ function Shop() {
 
 
     return (
-        <div style={{background:"rgb(228, 224, 224)"}}>
+        <div className="shop">
+            <Background opacity=".5" height="25rem"/>
+            <TitleTwo title="shop"/>
+
+         
 
 
             <div>

@@ -20,31 +20,22 @@ function Services() {
             title: "secure payment system",
             content: "We VAlue our customers and we put theirs needs firs"
         }
-
-
     ]
     return (
         <div className="container">
-        <div className="services">
-        {
-                myservices.map((item, i) => {
-                    return <div key={i} className="row">
-                        <section className="col-lg-4 col-md-6 col-sm-12">
-                        <span>{item.icon}</span>
-                        <h5>{item.title}</h5>
-                        <p>{item.content}</p>
-                            
-                        </section>
-                       
-
-                    </div>
-                })
-            }
-            
-        </div>
-
-
-
+            <div className="services">
+                {
+                    myservices.map((item, i) => {
+                        return <div key={i} className="row">
+                            <section className="col-lg-4 col-md-6 col-sm-12">
+                                <span>{item.icon}</span>
+                                <h5>{item.title}</h5>
+                                <p>{item.content}</p>
+                            </section>
+                        </div>
+                    })
+                }
+            </div>
         </div>
     )
 }

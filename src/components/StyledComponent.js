@@ -1,4 +1,21 @@
 import styled from 'styled-components'
+import desktop from '../images/desktop.jpg'
+
+const Background = styled.header`
+background:url(${props => props.image?props.image:desktop}) ;
+width:${props =>props.width?props.width:"100%"};;
+height:${props =>props.height?props.height:"100%"};
+opacity:${props =>props.opacity?props.opacity:"1"};
+position:${props =>props.position?props.position:"relative"};
+background-size:cover;
+
+&:hover{
+  transform: scale(1.5);
+  transition: all 0.3s linear;
+}
+
+
+`
 
 const Button = styled.button`
 display:block;
@@ -20,3 +37,5 @@ border:none;
 }
 
 `
+
+export{Background,Button}
