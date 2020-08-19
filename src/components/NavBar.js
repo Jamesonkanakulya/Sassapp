@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {FaAlignLeft, FaSearch, FaShoppingCart } from 'react-icons/fa'
+import { FaAlignLeft, FaSearch, FaShoppingCart } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import { BsPersonFill } from "react-icons/bs";
 import Title from './Title';
+import {Dropdown, ButtonGroup,DropdownButton } from 'react-bootstrap'
 
 export class Navbar extends Component {
 
@@ -43,42 +44,60 @@ export class Navbar extends Component {
 
     componentDidMount() {
         window.addEventListener('scroll', () => {
-            const top = window.scrollY <200
-        if(top !==true){
-            this.setState({
-                scroll:true
-            })
+            const top = window.scrollY < 200
+            if (top !== true) {
+                this.setState({
+                    scroll: true
+                })
 
-        }   else{
-            this.setState({
-                scroll:false
-            })
+            } else {
+                this.setState({
+                    scroll: false
+                })
 
-        }
+            }
 
-    })
+        })
     }
- 
+
 
 
 
     render() {
-     
-        const { search, showSearch, showMenu,scroll } = this.state
+
+        const { search, showSearch, showMenu, scroll } = this.state
         return (
-            <div className={scroll?"navBar":"nav-bar"}>
+            <div className={scroll ? "navBar" : "nav-bar"}>
                 <div className="nav-items">
-                    <Link to="/"><Title/> </Link>
+                    <Link className="headerIcon" to="/"><Title /> </Link>
+
                     <div >
-                        <ul  className={showMenu? "show-icon": "hide-icon"} >
-                        <span  onClick={this.handleNav} id= "closeIcon"className={!showMenu ? "hide-icon" : "close-icon"} ><IoMdClose /></span>
+                        <ul className={showMenu ? "show-icon" : "hide-icon"} >
+                            <span onClick={this.handleNav}
+                                className={!showMenu ? "hide-icon" : "close-icon  closeIcon"} >
+                                <IoMdClose /></span>
 
                             <li><Link to='/'>Home</Link></li>
                             <li><Link to='/shop'>Shop</Link></li>
                             <li> <Link to='/about'>About</Link></li>
-                            <li>  <Link to='/latest'>Latest</Link></li>
+                            <li>  <Link to='/gallery'>Gallery</Link></li>
                             <li><Link to='/blog'>Blog</Link></li>
-                            <li><Link to='/pages'>Pages</Link></li>
+                            <li>
+
+                                <DropdownButton
+                                  
+                                    title="Pages"
+                                    id="dropdown-menu-align-right"
+                                    variant="yellow"
+                                    className="drope"
+                                    
+                                >
+                                    <Dropdown.Item eventKey="1"><Link to= "/login">Login</Link></Dropdown.Item>
+                                    <Dropdown.Item eventKey="2"><Link to= "/chart">Chart</Link></Dropdown.Item>
+                                  
+                                </DropdownButton>
+
+                            </li>
                             <li><Link to='/contact'>Contact</Link></li>
                         </ul>
 
@@ -89,17 +108,17 @@ export class Navbar extends Component {
                     <div className="search-container">
 
                         <span className="menu-icon" onClick={this.handleNav} >
-                           
-                                <span className={showMenu ? "hide-icon" : "show-icon"} ><FaAlignLeft /></span>
-                           
+
+                            <span className={showMenu ? "hide-icon" : "show-icon"} ><FaAlignLeft /></span>
+
                         </span>
 
-                        <form id ="search" className="form-inline my-2 my-lg-0" onSubmit={this.handleSearch}>
-                         
+                        <form id="search" className="form-inline my-2 my-lg-0" onSubmit={this.handleSearch}>
+
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            <span><BsPersonFill/></span>
-                            <span><FaShoppingCart/></span>
+                            <span><BsPersonFill /></span>
+                            <span><FaShoppingCart /></span>
 
 
                         </form>

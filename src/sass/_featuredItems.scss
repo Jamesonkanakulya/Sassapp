@@ -1,16 +1,18 @@
 .featuredItems{
     display: flex;
     justify-content: space-around;
-    margin: 3rem auto;
+    margin: 8rem auto 3rem  auto;
 
     h2{
-        position: absolute;
+        position:absolute;
+
         margin-top: -6rem;
         font-family: 'Noto Serif', serif;
         letter-spacing: 2px;
         font-size: 2rem;
         text-transform: uppercase;
         font-weight: 700;
+
         
       
     }
@@ -32,6 +34,7 @@
             font-family: 'Nunito', sans-serif;
             text-transform: capitalize;
             font-style: italic;
+            margin-top: 2rem;
             font-weight: 700;
         }
         p{

@@ -14,7 +14,8 @@ export default class LabettieProvider extends Component {
             homeImages:[],
             newImages:[],
             itemProduct:[],
-            products:[]
+            products:[],
+            chartItems:[],
 
            
              
@@ -27,13 +28,13 @@ export default class LabettieProvider extends Component {
         try {
             let response = await Client
                 .getEntries({
-                    content_type: 'post'
+                    content_type: 'myVideos'
                 })
                 .then((response) => this.setState({
                     items:response.items
                 }),
                 )
-                let posts = this.organiseData(this.state.items)
+                let posts = this.organiseVideo(this.state.items)
                 
                
                 this.setState({
@@ -115,10 +116,18 @@ export default class LabettieProvider extends Component {
         return temppost
      
     }
-  
-    
 
-
+    organiseVideo = (items) =>{
+        let temppost = items.map(item=>{
+            let id = item.sys.id
+            let videos = item.fields.videos.map(image => image.fields.file.url);
+            let post = {...item.fields,videos,id}
+           return post
+        })
+        return temppost
+     
+    }
+ 
     filterpost = (blogpost)=>{
         const mycontext = [...this.state.products]
         const post = mycontext.filter(item=> item.blogpost === this.state.blogpost);
@@ -131,28 +140,33 @@ export default class LabettieProvider extends Component {
         let tempProducts = product.find(item => item.slug===slug)
         return tempProducts
     }
-    
-
-
-
+ 
     componentDidMount(){
         this.getData()
         this.getImages()
         this.getProducts()
         this. filterProduct()
-   
-        
-        
-       
-        
-    }
+             
+                  }
+
+
+    handleChart =(item) =>{
+
+        const tempItem = this.state.products.find(product => item===product.title )
+        const NewItem = [...this.state.chartItems,tempItem]
+        this.setState({
+            chartItems:NewItem
+        })
+           }
 
     render() {
         return <LabettieContext.Provider value={{context:this.state.context,
         images:this.state.newImages,
         products:this.state.products,
         filterProduct:this. filterProduct,
-        filterpost: this.filterpost
+        filterpost: this.filterpost,
+        handleChart:this.handleChart,
+        chartItems:this.state.chartItems
 
         }}>
         {this.props.children}

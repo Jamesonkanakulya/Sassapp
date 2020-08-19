@@ -1,0 +1,280 @@
+.cart {
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 1rem;
+        color: #7e7878;
+        li {
+            h6 {
+                position: relative;
+
+            
+
+                width: 10rem;
+                top: -5rem;
+                left: 12rem;
+            }
+
+         
+
+            &:nth-child(2) {
+                padding-left: 56%;
+            }
+            &:nth-child(3) {
+                padding-left: 10%;
+            }
+            &:nth-child(4) {
+                padding-left: 15%;
+            }
+            &:nth-child(5) {
+                padding-left: 10%;
+            }
+        }
+
+
+        @media screen and (max-width: 1000px) {
+
+            li{
+                &:nth-child(2) {
+                    padding-left: 30%;
+                }
+            }
+            
+        }
+    }
+}
+
+.cartItems {
+
+
+
+
+
+    h6 {
+        position: relative;
+
+        padding-left: 2rem;
+
+      
+        top: -5rem;
+        left: 12rem;
+    }
+
+    img {
+        width: 12rem;
+
+        height: 8rem;
+    }
+
+    p {
+        position: relative;
+        left: 62%;
+        top: -7rem;
+    }
+
+    table {
+        position: relative;
+        left:75%;
+        top: -10.4rem;
+        padding: auto 1rem;
+        tr {
+            text-align: center;
+            cursor: pointer;
+        }
+    }
+
+    h5 {
+        position: relative;
+        top: -12.5rem;
+        left: 92%;
+    }
+
+
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        margin: 1.5rem auto;
+        font-size: 1rem;
+
+   
+
+        h6 {
+            top: 5%;
+            left: 2%;
+        }
+
+        img{
+            width: 8rem;
+            height: 6rem;
+        }
+
+        p{
+            
+            
+            margin-top: 2rem;
+            left: 220%;
+        
+            @media screen and (max-width: 750px) {
+               
+                left: 150%;
+
+            }
+           
+
+        }
+        table{
+        left: 300%;
+        top: -0.3rem;
+        @media screen and (max-width: 750px) {
+          
+            left: 240%;
+
+        }
+
+        }
+        h5{
+            top: -0.7rem;
+            
+            left: 600%;
+            @media screen and (max-width: 780px) {
+          
+                left: 650%;
+
+                @media screen and (max-width: 500px) {
+          
+                    left: 490%;
+        
+                }
+    
+            }
+
+        }
+    
+    }
+}
+
+
+
+.cartCheckOut {
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        margin: 4rem auto;
+
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: #0c95f7;
+            }
+        }
+        li {
+            &:nth-child(1) {
+            }
+            &:nth-child(2) {
+            }
+        }
+    }
+}
+
+.cartSubTotal {
+    padding: 1rem auto;
+    h6 {
+        position: relative;
+        left: 79%;
+        @media screen and (max-width: 800px) {
+            left: 75%;
+        }
+    }
+    h4 {
+        position: relative;
+        left: 94%;
+        top: -1.7rem;
+        font-size: 1rem;
+        @media screen and (max-width: 800px) {
+            left: 91%;
+        }
+    }
+}
+
+.shipping {
+    p {
+        position: relative;
+        left: 70%;
+        @media screen and (max-width: 800px) {
+            left: 50%;
+        }
+    }
+
+    ul {
+        position: relative;
+        list-style: none;
+        left: 69%;
+        top: -2.5rem;
+        width: 30%;
+
+        li {
+            text-align: right;
+            font-size: 14px;
+        }
+    }
+
+    span {
+        position: relative;
+        left: 88%;
+        text-align: right;
+        top: -2rem;
+        font-size: 0.8rem;
+        @media screen and (max-width: 800px) {
+            left: 70%;
+        }
+    }
+
+    .cartInput {
+        margin-left: 70%;
+        padding-bottom: 3rem;
+        select {
+            width: 20rem;
+            @media screen and (max-width: 800px) {
+                position: relative;
+                left: -12rem;
+            }
+        }
+
+        input {
+            width: 20rem;
+            height: 2.5rem;
+            text-transform: capitalize;
+            border-radius: 5px;
+            border: none;
+
+            @media screen and (max-width: 1200px) {
+                position: relative;
+                left: -12rem;
+
+
+                     @media screen and (max-width: 1200px) {
+                position: relative;
+                left: -12rem;
+            }
+            }
+        }
+
+       
+    }
+    .buttonOne{
+        position: relative;
+        left:80%;
+         padding:1rem 2re;
+         @media screen and (max-width: 900px) {
+            left: 60%;
+        }
+    }
+
+    .buttonTwo{
+        display: flex;
+        justify-content: space-between;
+           padding-bottom:2rem ;
+    }
+}

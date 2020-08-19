@@ -1,10 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Pages() {
     return (
         <div>
-            hello pages
             
+            hello pages
+            <ul>
+                <li> <Link to= "login/">Login</Link> </li>
+                <li> <Link to= "chart/">Chart</Link> </li>
+                
+            </ul>
         </div>
     )
 }

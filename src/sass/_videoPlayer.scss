@@ -4,10 +4,11 @@
     justify-content: center;
     justify-items: center;
     height: 820px;
-    margin: 8rem auto 2rem  1%;
+    margin: 4rem auto -18rem  0;
 
     @media screen and (max-width:800px){
         display: none;
+     margin-bottom: 5rem;
     
        
     

@@ -1,0 +1,99 @@
+.login{
+    margin-top: 8rem;
+    padding:1rem;
+  
+    h2{
+            
+        margin:1rem auto;
+        text-transform: capitalize;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+    }
+  
+
+    .left{
+        background: rgb(231, 120, 181);
+        align-items: center;
+        text-align: center;
+        padding: 10rem 1rem;
+        color: white;
+    
+        p{
+            margin: 2rem auto;
+         
+        }
+        button{
+            padding:1rem 1.5rem;
+            background:transparent;
+            color: white;
+            border-radius: 8px;
+            border: 2px solid white;
+            text-transform: capitalize;
+            &:hover{
+                background: white;
+                color: rgb(231, 120, 181) ;
+            }
+
+            
+        }
+
+    }
+    .right{
+     
+        padding: 2rem 1rem;
+            .typipingInput{
+                background: transparent;
+                width: 100%;
+                margin: 1rem auto;
+                height: 3rem;
+                padding-left: 2rem;
+                border: 1px solid transparent;
+                border-bottom: 1px solid rgb(134, 128, 128);
+            
+            }    
+            input:focus{
+             outline: none;
+          
+            }
+
+            .checkInput{
+            margin: 1rem auto 1rem 0rem;
+            
+            }
+
+            button{
+                display: block;
+               width: 100%;
+               padding: 1rem;
+               border-radius: 5px;
+               border: none;
+               text-transform: uppercase;
+               background:  rgb(97, 129, 236);
+               color: white;
+               &:hover{
+                color :rgb(97, 129, 236);
+                border: 1px solid rgb(97, 129, 236);
+                background: white;
+                transition: all 0.3s ease-in;
+            }
+        
+               
+            }
+
+            p{
+                margin:1rem auto 1.5rem 70%;
+                text-transform: capitalize;
+                a{
+                    text-decoration: none;
+                    &:hover{
+                        color: rgb(175, 174, 174);
+                    }
+                }
+            }
+          
+        
+
+       
+
+    }
+}

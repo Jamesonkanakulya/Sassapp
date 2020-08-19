@@ -104,8 +104,12 @@ function About() {
 
             </div>
 
+            <div style={{marginLeft:"-1.7rem",marginTop:"-5rem"}}>
             <HomeVideo/>
+            </div>
+            <div style={{marginTop:"-20rem"}}>
             <Services/>
+            </div>
 
 
         

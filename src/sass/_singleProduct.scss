@@ -1,0 +1,83 @@
+.singleProduct {
+    text-align: center;
+    color: #0b1c39;
+
+    h2 {
+        text-transform: capitalize;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin: 1.5rem auto;
+    }
+
+    h5 {
+        text-transform: capitalize;
+        font-style: italic;
+        font-weight: 500;
+     
+    }
+
+    img {
+        width: 100%;
+        height: 100vh;
+    }
+
+    p {
+        width: 60%;
+        margin: 1.5rem auto 1.5rem 20%;
+    }
+
+    button {
+        color: steelblue;
+        margin: 2rem auto;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        border: 2px solid steelblue;
+        background: white;
+        text-transform: uppercase;
+        &:focus{
+            outline: none;
+         }
+
+
+        &:hover {
+            color: white;
+            background: steelblue;
+            transition: all 0.8s ease;
+        }
+    }
+
+    .counter {
+        display: flex;
+  
+        text-align: center;
+        width: 20%;
+        margin-left: 35%;
+        justify-content: center;
+        padding-top: 2.3rem;
+
+        h6{
+            margin-top: 4rem;
+        }
+
+        .mycount{
+            position: relative;
+            left: 10%;
+            top: -1.6rem;
+            border: 2px solid steelblue;
+           
+            padding: 0.5rem 1rem;
+
+
+
+            span {
+                padding: 1rem;
+
+                
+               
+                font-size: 2rem;
+             
+                
+            }
+        }
+    }
+}

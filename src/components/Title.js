@@ -3,7 +3,7 @@ import React from 'react'
 function Title() {
     return (
         <div>
-            <h1>Labettie<em style={{color:"red"}}>Designz</em></h1>
+            <h1>Jmeson<em style={{color:"red"}}>Kanakulya</em></h1>
         </div>
     )
 }

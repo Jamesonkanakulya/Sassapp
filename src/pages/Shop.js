@@ -4,8 +4,9 @@ import { LabettieContext } from '../components/Context';
 import { PAgenation } from '../components/PAgenation';
 import PopularItems from '../components/PopularItems';
 import Services from '../components/Services';
-import {Background} from '../components/StyledComponent';
+import { Background } from '../components/StyledComponent';
 import TitleTwo from '../components/TitleTwo';
+import Subscribe from '../components/Subscribe';
 
 
 const getUnique = (items, value) => {
@@ -35,10 +36,7 @@ function Shop() {
             return setListProducts(AltListProducts)
 
         }
-
     }, [products])
-
-
     const handleCategoy = e => {
         let name = e.target.name
         let category = e.target.type
@@ -53,33 +51,22 @@ function Shop() {
             tempProducts = tempProducts.filter(item => item.category === value)
         }
         setListProducts(tempProducts)
-
-
-
     }
-
     const IndexOfLastPost = currentPage * postPerPage;
     const indexOfFirstPOst = IndexOfLastPost - postPerPage
     const currentPosts = ListProducts.slice(indexOfFirstPOst, IndexOfLastPost)
-
     const paginate = pageNumber => setCurrentPage(pageNumber);
-
-
-
 
     return (
         <div className="shop">
-            <Background opacity=".5" height="25rem"/>
-            <TitleTwo title="shop"/>
-
-         
-
-
+            <Background opacity=".5" height="25rem" />
+            <TitleTwo title="shop" />
             <div>
                 <form className="form-group pt-4 ml-5 w-25">
                     <label style={{ fontSize: "1rem", textTransform: "capitalize" }}
                         htmlFor="category"><strong>sort by category :</strong></label>
-                    <select name="category" id="category" value={category} className="form-control"
+                    <select name="category" id="category" value={category} 
+                    className="form-control"
                         onChange={handleCategoy}
                     >
                         {
@@ -87,31 +74,23 @@ function Shop() {
                                 return <option value={item} key={i}>
                                     {item}
                                 </option>
-
                             })
                         }
                     </select>
 
                 </form>
             </div>
-
-
             <div className="container mb-4 ">
-
                 <div className="pageList">
                     <PopularItems PopularProducts={currentPosts} show={false} />
-
-                    <PAgenation className="pagination" postPerPage={postPerPage} totalPosts={ListProducts.length}
+                    <PAgenation className="pagination" postPerPage={postPerPage} 
+                    totalPosts={ListProducts.length}
                         paginate={paginate}
                     />
-
                 </div>
-
-
             </div>
             <Services />
-
-
+            <Subscribe/>
         </div>
     )
 }

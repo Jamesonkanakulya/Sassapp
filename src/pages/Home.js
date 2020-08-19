@@ -59,11 +59,6 @@ export class Home extends Component {
 
                     </div>
 
-
-
-
-
-
                 </div>
                 <FeaturedItems />
                 <Services/>
