@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Animate from 'animate.css-react'
-import gld from '../images/gld.png'
 import FeaturedItems from '../components/FeaturedItems'
 import Services from '../components/Services'
+import gld from '../images/gld.png'
 
 export class Home extends Component {
     constructor(props) {
@@ -42,23 +41,14 @@ export class Home extends Component {
                                 <h1>select your new perfect product</h1>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                                 Blanditiis, maxime tempora officia nihil expedita porro
-             pariatur rem omnis nemo voluptatum beatae!</p>
+                                    pariatur rem omnis nemo voluptatum beatae!</p>
                                 <button>shop now</button>
-
-
                             </div>
-
-
                         </div>
                         <div className="col-lg-5 col-md-12 d-sm-none d-md-block pt-4 mt-4   position-relative">
-
                             <img src={gld} alt="success" />
-
                         </div>
-
-
                     </div>
-
                 </div>
                 <FeaturedItems />
                 <Services/>

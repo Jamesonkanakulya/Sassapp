@@ -1,0 +1,44 @@
+.checkout .first {
+  width: 100%;
+  background: #eff4fc;
+  padding: 1rem 0rem;
+}
+.checkout .first span:nth-child(2) {
+  text-decoration: underline;
+}
+.checkout .second {
+  margin: 1rem auto;
+}
+.checkout .second input {
+  width: 30%;
+  padding: 0.5rem;
+  margin-right: 2rem;
+  border: 1px solid #eeeeee;
+}
+.checkout .second input:nth-child(3) {
+  display: block;
+  margin-top: 1rem;
+  width: 2%;
+}
+.checkout .second input:focus {
+  outline: none;
+}
+.checkout .second span {
+  position: relative;
+  left: 1.4rem;
+  top: -1.08rem;
+}
+.checkout .second button {
+  display: block;
+  margin: 0rem 0rem 1rem 0rem;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  border: 1px solid #7cadf7;
+  background: white;
+  color: #7cadf7;
+}
+.checkout .second button:hover {
+  background: #7cadf7;
+  color: white;
+  transition: all 0.5s linear;
+}

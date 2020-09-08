@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import { FaAlignLeft, FaSearch, FaShoppingCart } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import { BsPersonFill } from "react-icons/bs";
-import Title from './Title';
+
+import logo from '../images/logo.png'
 import {Dropdown, ButtonGroup,DropdownButton } from 'react-bootstrap'
 
 export class Navbar extends Component {
@@ -19,6 +20,7 @@ export class Navbar extends Component {
 
         }
     }
+
 
     handleinput = event => {
         this.setState({
@@ -60,16 +62,41 @@ export class Navbar extends Component {
         })
     }
 
+    
+
 
 
 
     render() {
+        // const pages = [
+        //     {
+        //         address:'/',
+        //         title:"Home"
+
+        //     },
+        //     {
+        //         address:'/shop',
+        //         title:"Shop"
+        //     }
+        //     {
+        //         address:'/shop',
+        //         title:"Shop"
+        //     }
+        //     {
+        //         address:'/shop',
+        //         title:"Shop"
+        //     }
+        //     {
+        //         address:'/shop',
+        //         title:"Shop"
+        //     }
+        // ]
 
         const { search, showSearch, showMenu, scroll } = this.state
         return (
             <div className={scroll ? "navBar" : "nav-bar"}>
                 <div className="nav-items">
-                    <Link className="headerIcon" to="/"><Title /> </Link>
+                    <Link className="headerIcon" to="/"> <img style={{width:"10rem"}} src={logo} alt="labettie design" /> </Link>
 
                     <div >
                         <ul className={showMenu ? "show-icon" : "hide-icon"} >
@@ -94,6 +121,7 @@ export class Navbar extends Component {
                                 >
                                     <Dropdown.Item eventKey="1"><Link to= "/login">Login</Link></Dropdown.Item>
                                     <Dropdown.Item eventKey="2"><Link to= "/chart">Chart</Link></Dropdown.Item>
+                                    <Dropdown.Item eventKey="3"><Link to= "checkout/">Checkout</Link></Dropdown.Item>
                                   
                                 </DropdownButton>
 
@@ -112,16 +140,19 @@ export class Navbar extends Component {
                             <span className={showMenu ? "hide-icon" : "show-icon"} ><FaAlignLeft /></span>
 
                         </span>
-
+                        <div className="myform">
+                            
                         <form id="search" className="form-inline my-2 my-lg-0" onSubmit={this.handleSearch}>
 
-                            <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                            <span><BsPersonFill /></span>
-                            <span><FaShoppingCart /></span>
+<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+<button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+<span><BsPersonFill /></span>
+<span><FaShoppingCart /></span>
 
 
-                        </form>
+</form>
+                        </div>
+
 
 
                         {/* <form >

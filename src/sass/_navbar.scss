@@ -11,7 +11,8 @@
 @mixin myNavBar {
    
     width:100vw ;
-    height: 17vh;
+    background: white;
+ 
     top: 0;
     left: 0;
     
@@ -93,6 +94,7 @@
 
 .nav-bar{
    position: relative;
+
    @include myNavBar()
 
 }
@@ -119,7 +121,7 @@
     
 
     @mixin SmallNAv {
-      height: 9rem;
+      height: 16rem;
     
 
         .headerIcon{
@@ -134,6 +136,7 @@
             display: flex;
             width: 100%;
             height: 23vh;
+            // padding-top: 15rem;
 
             ul{
                 position: relative;
@@ -142,14 +145,10 @@
                 background: yellow;
                 width: 100vw;
                 height: 120vh;
-                padding-top: 18rem;
+                padding-top: 26rem;
                 padding-left: 40%;
                 z-index: 1;
-                li{
-                    a{
-
-                    }
-                }
+           
 
                     .closeIcon{
                     position: absolute;
@@ -176,6 +175,15 @@
             .search-container{
                 position: absolute;
                 left: 70%;
+
+                @media screen and (max-width:500){
+                    left: 73%;
+                }
+                .myform{
+                    position: relative;
+                  top: 6rem;
+                 
+                }
 
 
 
@@ -222,6 +230,7 @@
         justify-content: center;
         justify-items: center;
         width: 100%;
+      
         @include SmallNAv()
        }
     .navBar{

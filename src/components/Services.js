@@ -1,8 +1,15 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import { FiBox, FiRefreshCcw } from "react-icons/fi";
 import { FaShieldAlt } from "react-icons/fa";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 function Services() {
+    useEffect(() =>{
+
+        Aos.init({duration:2000})
+
+    },[])
 
     const myservices = [
         {
@@ -23,7 +30,7 @@ function Services() {
     ]
     return (
         <div className="container">
-            <div className="services">
+            <div data-aos="fade-up" className="services">
                 {
                     myservices.map((item, i) => {
                         return <div key={i} className="row">

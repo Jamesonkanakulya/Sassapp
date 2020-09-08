@@ -16,6 +16,7 @@ import Animate from 'animate.css-react'
 import SingleProduct from './pages/SingleProduct';
 import Login from './components/Login';
 import Chart from './components/Chart';
+import Checkout from './components/Checkout';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route exact path='/pages' component={Pages}/>
         <Route exact path='/login' component={Login}/>
         <Route exact path='/chart' component={Chart}/>
+        <Route exact path='/checkout' component={Checkout}/>
         <Route component={Errorpage}/>
         
       </Switch>

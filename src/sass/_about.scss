@@ -49,13 +49,13 @@
 .mission{
     margin-top: -36rem;
     h3{
-        position: relative;
+       
         text-transform: capitalize;
         top: -1rem;
         left: 7rem;
     }
     h3:before{
-        position: absolute;
+        position: relative;
         content: '';
         border-top: 3px solid red;
         width: 6rem;
@@ -67,11 +67,15 @@
     }
 }
 
+
 @media screen and (max-width:800px){
     .aboutLeft{
          top: -38rem;;
      
       
+    }
+    .service{
+        margin-top: 7rem;
     }
     
 

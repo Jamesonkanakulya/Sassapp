@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 import TitleTwo from '../components/TitleTwo'
 import HomeVideo from '../components/HomeVideo'
@@ -7,13 +7,16 @@ import { Link } from 'react-router-dom'
 import { Button, Background } from '../components/StyledComponent'
 import Geometric from '../images/Geometric.jpg'
 import author from '../images/author.jpeg'
-
-
-
-
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 function About() {
+    useEffect(() =>{
+
+        Aos.init({duration:2000})
+
+    },[])
 
     const mission = [
         {
@@ -44,10 +47,10 @@ function About() {
 
             <div className="container mt-4">
                 <div className="row">
-                    <div className="col-lg-6 col-md-6 ">
+                    <div data-aos="fade-up" className="col-lg-6 col-md-6 ">
                         <Background image={Geometric} style={{ width: '100%', height: '40rem' }}
                             opacity="0.1" />
-                        <div className="aboutRight">
+                        <div  className="aboutRight">
 
                             <h4>about</h4>
                             <h2>welcome to labettie design</h2>
@@ -77,8 +80,8 @@ function About() {
 
 
                     </div>
-                    <div className="col-lg-6 col-md-6 col-sm-12">
-                        <div className="aboutLeft">
+                    <div data-aos="fade-up" className="col-lg-6 col-md-6 col-sm-12">
+                        <div  className="aboutLeft">
 
                             <img src={author} alt="" />
 
@@ -90,7 +93,7 @@ function About() {
                 </div>
 
 
-                <div className="mission" >
+                <div data-aos="fade-up" className="mission" >
                     {mission.map((item, i) => {
                         return <section key={i}>
                             <h3>{item.title}</h3>
@@ -104,10 +107,10 @@ function About() {
 
             </div>
 
-            <div style={{marginLeft:"-1.7rem",marginTop:"-5rem"}}>
+            <div data-aos="fade-up" style={{marginLeft:"-1.7rem",marginTop:"-5rem"}}>
             <HomeVideo/>
             </div>
-            <div style={{marginTop:"-20rem"}}>
+            <div className="service">
             <Services/>
             </div>
 

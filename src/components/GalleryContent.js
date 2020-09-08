@@ -3,6 +3,9 @@ import { LabettieContext } from './Context'
 import { PAgenation } from './PAgenation'
 import { Link } from 'react-router-dom'
 import {Button} from './StyledComponent'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 function GalleryContent() {
     const products = useContext(LabettieContext)
@@ -27,6 +30,11 @@ function GalleryContent() {
         }
 
     }, [products])
+    useEffect(() =>{
+
+        Aos.init({duration:2000})
+
+    },[])
 
 
 
@@ -42,7 +50,7 @@ function GalleryContent() {
         <div className="container">
         {
                 currentPosts.map((item, i) => {
-                    return <div key={i}  >
+                    return <div data-aos="fade-up"  key={i}  >
 
                         <div className="row">
                             <div className="col-lg-6 col-md-6 col-sm-12 mt-4">

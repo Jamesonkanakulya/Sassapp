@@ -1,0 +1,76 @@
+.checkout{
+
+
+    .first{
+
+      width: 100%;
+       
+        background: rgb(239, 244, 252);
+        padding: 1rem 0rem;
+       
+       
+
+        span{
+            
+
+           &:nth-child(2){
+            text-decoration: underline;
+           }
+            
+        }
+
+    }
+
+    .second{
+        margin: 1rem auto;
+        input{
+            width: 30%;
+            padding: 0.5rem;
+            margin-right: 2rem;
+            border: 1px solid #eeeeee;
+
+            &:nth-child(3){
+                display: block;
+                margin-top: 1rem;
+                
+                width:2%;
+             
+
+       
+                
+            }
+
+            &:focus{
+                outline: none;
+            }
+
+
+            
+        }
+        span{
+            position: relative;
+            left: 1.4rem;
+            top: -1.08rem;
+        }
+
+      
+        
+
+        button{
+            display: block;
+            margin: 0rem 0rem 1rem 0rem;
+            padding: 1rem 2rem;
+            border-radius: 3px;
+            border: 1px solid rgb(124, 173, 247);
+            background: white;
+            color: rgb(124, 173, 247);
+            &:hover{
+
+                background: rgb(124, 173, 247);
+                color: white;
+                transition: all 0.5s linear;
+
+            }
+        }
+    }
+}

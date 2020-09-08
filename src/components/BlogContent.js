@@ -4,6 +4,8 @@ import moment from 'moment'
 import { BsFillChatFill, BsPersonFill } from "react-icons/bs";
 import { PAgenation } from './PAgenation';
 import { Link } from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const getUnique = (items, value) => {
     return [...new Set(items.map(item => item[value]))]
@@ -34,7 +36,15 @@ function BlogContent() {
             return setListProducts(AltListProducts)
 
         }
-    }, [products])
+
+       
+    }, [products,])
+
+    useEffect(() =>{
+
+        Aos.init({duration:2000})
+
+    },[])
     const handleCategoy = e => {
         let name = e.target.name
         let category = e.target.type
@@ -69,7 +79,7 @@ function BlogContent() {
                     <div className="col-lg-8 col-md-12 col-sm-12 ">
                         {
                             currentPosts.map(item => {
-                                return <section className="right" key={item.id}>
+                                return <section data-aos="fade-up" className="right" key={item.id}>
                                     <img src={item.images[0]} alt={item.title} />
                                     <div className="dateFormat">
                                         <span className="date">{moment(item.datePosted).format("Do")}</span>
@@ -92,7 +102,7 @@ function BlogContent() {
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12 ">
 
-                        <div className="left">
+                        <div  className="left">
                             <form id="search" className="form-inline my-2 my-lg-0" >
 
                                 <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -102,7 +112,7 @@ function BlogContent() {
 
                             </form>
 
-                            <div className="category">
+                            <div data-aos="fade-up"  className="category">
 
                                 <h3>Category</h3>
 
@@ -126,7 +136,7 @@ function BlogContent() {
 
                             </div>
 
-                            <div className="recentPosts">
+                            <div data-aos="fade-up" className="recentPosts">
                                 <h3>Recent post</h3>
                                 <div className="dropdown-divider mb-4"></div>
                                 {
@@ -143,7 +153,7 @@ function BlogContent() {
 
 
                             </div>
-                            <div className="instagramPosts">
+                            <div data-aos="fade-up" className="instagramPosts">
                                 <h3>Instagram feeds</h3>
                                 <div className="dropdown-divider mb-4"></div>
                                 {
@@ -157,7 +167,7 @@ function BlogContent() {
 
                             </div>
 
-                            <div className="newSettler">
+                            <div data-aos="fade-up" className="newSettler">
                             <h3>new settler</h3>
                                 <div className="dropdown-divider mb-4"></div>
 

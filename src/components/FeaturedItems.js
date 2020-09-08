@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext,useEffect } from 'react'
 import { LabettieContext } from './Context'
 import bag from '../images/bag.JPG'
 import necklaceOne from '../images/necklaceOne.jpg'
@@ -7,6 +7,8 @@ import shoe from '../images/shoe.jpg'
 import PopularItems from './PopularItems'
 import HomeVideo from './HomeVideo'
 import Services from './Services'
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 function FeaturedItems() {
@@ -14,6 +16,11 @@ function FeaturedItems() {
     const tempProducts = useContext(LabettieContext)
     const featuredProducts = tempProducts.products.filter(item => item.featured === true)
     const PopularProducts = tempProducts.products.filter(item => item.popular === true)
+    useEffect(() =>{
+
+        Aos.init({duration:2000})
+
+    },[])
 
     if (!featuredProducts) {
         return <div>
@@ -27,7 +34,7 @@ function FeaturedItems() {
     return (
         <>
 
-            <div className="featuredItems">
+            <div data-aos="fade-up" className="featuredItems">
                 <h2>Featured Products</h2>
                 <div className="row">
                     {
@@ -48,7 +55,7 @@ function FeaturedItems() {
 
             </div>
 
-            <div className="featuredImages">
+            <div data-aos="fade-up" className="featuredImages">
 
 
 

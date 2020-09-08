@@ -13,7 +13,32 @@ function Chart() {
     const items = useContext(LabettieContext)
     const chartItems = items.chartItems
     const [zipcode, setZip] = useState('')
-    console.log(chartItems);
+
+    
+    const displayItems = () =>{
+        if(chartItems.length===0){
+            return <div>
+                You have not selected any items
+            </div>
+        }
+
+
+        chartItems.map(item => {
+            return <div className="cartItems" key={item.id}>
+                <div >
+                    <img src={item.images[0]} alt={item.title}/>
+                    <h6  >{item.title}</h6>
+                    <p  >{item.price}</p>
+                </div>
+                <div >
+                    <CartTable price={item.price}/>
+                </div>
+                <div className="dropdown-divider mb-4" />
+
+            </div>
+        })
+     }
+   
 
     const handleInputChange = (event) => {
 
@@ -51,27 +76,10 @@ function Chart() {
                         <li>Total</li>
                     </ul>
                     <div className="dropdown-divider mb-4" />
-
-
-
-
                 </div>
 
                 {
-                    chartItems.map(item => {
-                        return <div className="cartItems" key={item.id}>
-                            <div >
-                                <img src={item.images[0]} alt={item.title} />
-                                <h6  >{item.title}</h6>
-                                <p  >{item.price}</p>
-                            </div>
-                            <div >
-                                <CartTable price={item.price} />
-                            </div>
-                            <div className="dropdown-divider mb-4" />
-
-                        </div>
-                    })
+                     displayItems
                 }
 
                 <div className="cartCheckOut">
